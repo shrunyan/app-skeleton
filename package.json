@@ -4,7 +4,7 @@
   "description": "Application skeleton for Zesty products",
   "repository": "https://github.com/zesty-io/app-skeleton",
   "scripts": {
-    "test": "npm run test:unit",
+    "test": "",
     "test:unit": "npm run test:unit:bundle && node_modules/.bin/tape test/unit/bundle.tmp.js | node_modules/.bin/faucet",
     "test:unit:bundle": "node_modules/.bin/browserify -t babelify test/unit/**/*.spec.js > test/unit/bundle.tmp.js",
     "test:integration": "npm run test:integration:bundle && node_modules/.bin/tape",
