@@ -1,0 +1,13 @@
+{
+    "asi": true,
+    "curly": true,
+    "eqeqeq": true,
+    "forin": true,
+    "freeze": true,
+    "futurehostile": true,
+    "undef": true,
+    "unused": true,
+    "browser": true,
+    "devel": true,
+    "esnext": true
+}

@@ -1,0 +1,36 @@
+@import "../color.less";
+@import "../mixins/transistion.less";
+#networkMenu {
+  flex: 1;
+  a {
+    color: @z-sky;
+    letter-spacing: 1px;
+    line-height: 3rem;
+    padding: 1rem;
+    vertical-align: middle;
+    .transistion();
+
+    &:hover,
+    &:focus,
+    &:active {
+      // background-color: @z-dusk;
+      border-bottom: 1px solid @z-slate;
+      color: @z-white;
+    }
+
+    &.at {
+      border-bottom: 1px solid @z-slate;
+    }
+
+  }
+  .logo {
+    padding: 0;
+    float: left;
+    margin: 0;
+    line-height: 0;
+    img {
+      background: darken(@z-midnight, 3%);
+      padding: 0.5rem 0.9rem;
+    }
+  }
+}

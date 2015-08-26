@@ -1,0 +1,37 @@
+@import "../core/less/color.less";
+
+body {
+  background-color: @z-midnight;
+  color: @z-black;
+  #app {
+    border-bottom: 5px solid @z-teal;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  #main {
+    background-color: @z-white;
+    flex: 1;
+    padding: 0 1%;
+
+    .title {
+      border-top: 1px solid lighten(@z-midnight, 3%);
+      background: @z-midnight;
+      display: flex;
+      line-height: 3rem;
+      padding: 1rem;
+      h1 {
+        flex:1;
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin: 0;
+      }
+    }
+
+  }
+}
+
+a {
+  color: @z-blue;
+  text-decoration: none;
+}

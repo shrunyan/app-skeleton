@@ -1,0 +1,15 @@
+# Directories
+build/
+dist/
+public/
+node_modules/
+.idea/
+
+# Extensions
+*.log
+*.tmp
+*.tmp.*
+
+# Files
+.DS_Store
+app/config.js
