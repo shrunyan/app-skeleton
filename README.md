@@ -38,6 +38,14 @@ We use the [`tape`][tape] testing module which uses the [TAP][TAP] standard for 
 // TODO possibly load the HTML with JSDom to have a dom we can run integration tests against with something like nightmare to ensure our events handle and return expected results.
 
 
+## Reporting
+
+We have integrated [segment.io][segment] into our application codebase so we can capture app usage statistics to measure engagement and learn what application features users enjoy most. To configure segment you will need a segment dev and production project secret key to add to the `app/config.js`
+
+	export const SEGMENT_DEV = 'YOUR_SECRET_KEY'
+	export const SEGMENT_PROD = 'YOUR_SECRET_KEY'
+
+
 ## Dependencies
 
 - [riot][riot] (View Lib)
@@ -57,3 +65,4 @@ We use the [`tape`][tape] testing module which uses the [TAP][TAP] standard for 
 [babel]: https://babeljs.io/
 [editorconfig]: http://editorconfig.org/
 [browserify]: http://browserify.org/
+[segment]: http://segment.io
