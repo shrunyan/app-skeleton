@@ -10,7 +10,7 @@ let Service = {
    * @see `whatwg-fetch` polyfill for making fetch requests in the browser
    * @return promise
    */
-  fetch(url) {
+  fetch (url) {
     console.log('Service.fetch |', url)
 
     return fetch(url)
@@ -21,14 +21,14 @@ let Service = {
       })
   },
 
-  status(response) {
+  status (response) {
     if (response.status >= 200 && response.status < 300) {
       return response
     }
     throw new Error(response.statusText)
   },
 
-  json(response) {
+  json (response) {
     return response.json()
   }
 
