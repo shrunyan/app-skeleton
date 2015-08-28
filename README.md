@@ -30,6 +30,9 @@ We are writing our JavaScript as ES6 modules which are ran through a [`babel`][b
 
 Code style is enforced with `standard` (// TODO automate standard reporting) and an [`.editorconfig`][editorconfig] file. Before committing any code ensure your editor is configured to use the `.editorconfig` or your pull requests will be rejected.
 
+### State
+
+We are using [redux][redux] for our state management.
 
 ## Testing
 
@@ -66,3 +69,4 @@ We have integrated [segment.io][segment] into our application codebase so we can
 [editorconfig]: http://editorconfig.org/
 [browserify]: http://browserify.org/
 [segment]: http://segment.io
+[redux]: [http://rackt.github.io/redux/index.html]
