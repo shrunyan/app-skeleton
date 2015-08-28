@@ -11,7 +11,7 @@ Promise.polyfill()
 
 import riot from 'riot'
 import dispatcher from './util/dispatcher'
-import { ENV, SEGMENT_DEV, SEGMENT_PROD } from './config'
+import { SEGMENT_SECRET } from './config'
 import './tags/app.tag'
 
 app.dispatcher = dispatcher
@@ -24,7 +24,7 @@ Highcharts.setOptions({
 })
 
 // start tracking
-analytics.load(('DEV' === ENV?SEGMENT_DEV:SEGMENT_PROD))
+analytics.load(SEGMENT_SECRET)
 analytics.track('App Started')
 
 riot.mount('#app', 'app')
