@@ -8,10 +8,10 @@ import Promise from 'es6-promise'
 Promise.polyfill()
 
 import riot from 'riot'
-import './tags/app.tag'
 import reducers from './reducers'
+import { SEGMENT_SECRET } from './config'
 import { createStore } from 'redux'
-import { ENV, SEGMENT_DEV, SEGMENT_PROD } from './config'
+import './tags/app.tag'
 
 const store = createStore(reducers)
 
@@ -23,7 +23,7 @@ Highcharts.setOptions({
 })
 
 // start tracking
-analytics.load(('DEV' === ENV?SEGMENT_DEV:SEGMENT_PROD))
+analytics.load(SEGMENT_SECRET)
 analytics.track('App Started')
 
 riot.mount('#app', 'app', {store})
