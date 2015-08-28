@@ -43,10 +43,9 @@ We use the [`tape`][tape] testing module which uses the [TAP][TAP] standard for 
 
 ## Reporting
 
-We have integrated [segment.io][segment] into our application codebase so we can capture app usage statistics to measure engagement and learn what application features users enjoy most. To configure segment you will need a segment dev and production project secret key to add to the `app/config.js`
+We have integrated [segment.io][segment] into our application codebase so we can capture app usage statistics to measure engagement and learn what application features users enjoy most. To configure segment you will need to add your secret key to the `app/config.js` file.
 
-	export const SEGMENT_DEV = 'YOUR_SECRET_KEY'
-	export const SEGMENT_PROD = 'YOUR_SECRET_KEY'
+	export const SEGMENT_SECRET = 'YOUR_SECRET_KEY'
 
 
 ## Dependencies
