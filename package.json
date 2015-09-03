@@ -4,7 +4,7 @@
   "description": "Application skeleton for Zesty products",
   "repository": "https://github.com/zesty-io/app-skeleton",
   "scripts": {
-    "test": "",
+    "test": "npm run test:unit",
     "test:unit": "npm run test:unit:bundle && node_modules/.bin/tape test/unit/bundle.tmp.js | node_modules/.bin/faucet",
     "test:unit:bundle": "node_modules/.bin/browserify -t babelify test/unit/**/*.spec.js > test/unit/bundle.tmp.js",
     "test:integration": "npm run test:integration:bundle && node_modules/.bin/tape",
@@ -41,8 +41,9 @@
     "watchify": "^3.3.0"
   },
   "dependencies": {
+    "blueimp-md5": "^1.1.1",
     "es6-promise": "^2.3.0",
-    "grapnel": "^0.5.9",
+    "grapnel": "https://registry.npmjs.org/grapnel/-/grapnel-0.5.11.tgz",
     "moment": "^2.10.5",
     "redux": "^1.0.1",
     "riot": "^2.2.2",

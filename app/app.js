@@ -8,12 +8,8 @@ import Promise from 'es6-promise'
 Promise.polyfill()
 
 import riot from 'riot'
-import reducers from './reducers'
+import router from './router'
 import { SEGMENT_SECRET } from './config'
-import { createStore } from 'redux'
-import './tags/app.tag'
-
-const store = createStore(reducers)
 
 // @see http://api.highcharts.com/highcharts
 Highcharts.setOptions({
@@ -22,8 +18,10 @@ Highcharts.setOptions({
   }
 })
 
-// start tracking
+// Load tracking
 analytics.load(SEGMENT_SECRET)
 analytics.track('App Started')
 
-riot.mount('#app', 'app', {store})
+// Start
+router.navigate('/')
+

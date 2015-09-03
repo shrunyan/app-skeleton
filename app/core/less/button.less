@@ -12,7 +12,7 @@ button,
   display: inline-block;
   font-weight: 600;
   letter-spacing: 1px;
-  margin: 0.2rem 0.8rem;
+  margin: 0;
   padding: 0.5rem 0.8rem;
   text-shadow: 1px 1px 1px @z-slate;
 
@@ -24,4 +24,9 @@ button,
   &:active {
     background-color: darken(@z-green, 4%);
   }
+
+  &.tiny {
+    padding: .2rem .6rem;
+  }
+
 }
