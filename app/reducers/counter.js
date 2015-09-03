@@ -4,10 +4,10 @@ const initialState = {
 export default function exampleReducer(state = 0, action) {
   switch (action.type) {
     case 'INCREMENT':
-      return state + 1
+      return state + action.payload
       break;
     case 'DECREMENT':
-      return state - 1
+      return state - action.payload
       break;
     default:
       return state
