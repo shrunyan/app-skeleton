@@ -26,13 +26,39 @@ This bash script orchestrates all build steps irregardless of language. __If add
 
 [`gulp`][gulp] manages our application build. External dependencies are managed by [`npm`][npm]. It is ran on a local server with [`nodejs`][node] via the [`glup-connect`][connect] module.
 
-We are writing our JavaScript as ES6 modules which are ran through a [`babel`][babel] transpilation step then bundled with [`browserify`][browserify] for client delivery.
+We are writing our JavaScript as ES6 modules which are transpiled via [`babel`][babel] then bundled with [`browserify`][browserify] for client delivery.
 
 Code style is enforced with `standard` (// TODO automate standard reporting) and an [`.editorconfig`][editorconfig] file. Before committing any code ensure your editor is configured to use the `.editorconfig` or your pull requests will be rejected.
 
-### State
+### Routing: [Grapnel][grapnel]
+
+Our routing is implemented with the [Grapnel][grapnel] library. The router is in charge of starting our redux state machine and providing the created store to riot components which then pass the store to their children. It supports both `hashchange` and `pushState`.
+
+### State: [redux][redux]
 
 We are using [redux][redux] for our state management.
+
+### View: [riotjs][riot]
+
+We've chosen [riotjs][riot] to be our view layer. Riot components should be written as stateless as possible. Each component should ideally only do 2 things;
+
+1. subscribe to store changes and update
+2. dispatch user actions
+
+### Services
+
+Services are implemented from a delegate prototype `Service` object. We write a service implementation for each of our micro services.
+
+### Dependencies 
+
+- moment (Time Normalizing Lib)
+
+### Polyfills
+
+- es6-promise (Polyfill)
+- whatwg-fetch (Polyfill)
+- [Object.assign][object.assign]
+
 
 ## Testing
 
@@ -48,15 +74,6 @@ We have integrated [segment.io][segment] into our application codebase so we can
 	export const SEGMENT_SECRET = 'YOUR_SECRET_KEY'
 
 
-## Dependencies
-
-- [riot][riot] (View Lib)
-- grapnel (Routing)
-- moment (Time Lib)
-- es6-promise (Polyfill)
-- whatwg-fetch (Polyfill)
-
-
 [TAP]: https://testanything.org/tap-specification.html
 [tape]: https://github.com/substack/tape
 [gulp]: http://gulpjs.com/
@@ -69,3 +86,5 @@ We have integrated [segment.io][segment] into our application codebase so we can
 [browserify]: http://browserify.org/
 [segment]: http://segment.io
 [redux]: [http://rackt.github.io/redux/index.html]
+[grapnel]: [https://www.npmjs.com/package/grapnel]
+[object.assign]: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill]
