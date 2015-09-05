@@ -14,8 +14,22 @@ require('./ex-set-email.tag')
     <hr />
 
     <h1>Example Tags</h1>
-    <ex-counter store={opts.store}></ex-counter>
+    <ex-counter store={opts.store} count={state.counter}></ex-counter>
     <ex-set-email store={opts.store}></ex-set-email>
 
   </section>
+
+  <script type="es6">
+    // Get initial state
+    this.state = opts.store.getState()
+
+    this.on('mount', () => {
+      opts.store.subscribe(() => {
+        this.update({
+          state: opts.store.getState()
+        })
+      })
+    })
+  </script>
+
 </app>
