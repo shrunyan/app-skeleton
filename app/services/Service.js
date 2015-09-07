@@ -1,3 +1,5 @@
+import fetch from 'isomorphic-fetch'
+
 /**
  * Service
  * Basic service object for requesting an API
