@@ -2,6 +2,7 @@ require('../core/tags/account-menu.tag')
 require('./network-menu.tag')
 require('./ex-counter.tag')
 require('./ex-set-email.tag')
+require('./ex-reddit.tag')
 <app>
   <nav id="network">
     <network-menu></network-menu>
@@ -16,6 +17,7 @@ require('./ex-set-email.tag')
     <h1>Example Tags</h1>
     <ex-counter store={opts.store} count={state.counter}></ex-counter>
     <ex-set-email store={opts.store}></ex-set-email>
+    <ex-reddit store={opts.store}></ex-reddit>
 
   </section>
 

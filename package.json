@@ -44,9 +44,11 @@
     "blueimp-md5": "^1.1.1",
     "es6-promise": "^2.3.0",
     "grapnel": "https://registry.npmjs.org/grapnel/-/grapnel-0.5.11.tgz",
+    "isomorphic-fetch": "^2.1.1",
     "moment": "^2.10.5",
     "redux": "^1.0.1",
-    "riot": "^2.2.2",
-    "whatwg-fetch": "^0.9.0"
+    "redux-logger": "^1.0.6",
+    "redux-thunk": "^0.1.0",
+    "riot": "^2.2.2"
   }
 }

@@ -2,11 +2,14 @@
 
 import riot from 'riot'
 import grapnel from 'grapnel'
-import { createStore } from 'redux'
+import thunk from 'redux-thunk'
+import logger from 'redux-logger'
+import { createStore, applyMiddleware } from 'redux'
 import reducers from '../reducers'
 import '../tags/app.tag'
 
-const store = createStore(reducers)
+const middleware = applyMiddleware(thunk, logger)(createStore)
+const store = middleware(reducers)
 const router = new grapnel({
   hashchange: true
 })

@@ -2,7 +2,6 @@
 /* global analytics */
 
 // Setup Polyfills, one day these will go away
-import 'whatwg-fetch'
 import './polyfills/object.assign'
 import Promise from 'es6-promise'
 Promise.polyfill()
