@@ -15,11 +15,11 @@ _Example `config.js` File_
 
 ### 2) Start The Application
 
-Run the application locally with this command
+Run the application locally with this command. Accepts cli arguments `env`
 
-	$bash build.sh
+	$bash build.sh --env development
 
-This bash script orchestrates all build steps irregardless of language. __If adding a new build step, dependency or language it must ultimately be configured to run via this bash script.__
+This bash script orchestrates all build steps irregardless of language. __If adding a new build step, dependency or language it must ultimately be configured to run via this bash script.__ 
 
 
 ## Developing
