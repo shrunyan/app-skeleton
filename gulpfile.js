@@ -2,12 +2,17 @@
 
 var gulp = require('gulp')
 var plugins = require('gulp-load-plugins')()
+var minimist = require('minimist')
+var assign = require('lodash-node/modern/object/assign')
 
-function getTask(task) {
-    return require('./tasks/' + task)(gulp, plugins)
+var env = {
+  string: 'env',
+  default: {
+    env: process.env.NODE_ENV || 'development'
+  }
 }
-
-gulp.opts = {
+var argv = minimist(process.argv.slice(2), env)
+var options = {
   DEST: 'public',
   APP_ENTRY: 'app/app.js',
   LESS: [
@@ -20,6 +25,12 @@ gulp.opts = {
     'app/vendors/highcharts/highcharts-theme.js'
   ]
 }
+
+function getTask(task) {
+    return require('./tasks/' + task)(gulp, plugins)
+}
+
+gulp.opts = assign(options, argv)
 
 // Load Tasks
 gulp.task('html', getTask('html'))
