@@ -51,6 +51,6 @@
     "redux": "^1.0.1",
     "redux-logger": "^1.0.6",
     "redux-thunk": "^0.1.0",
-    "riot": "^2.2.2"
+    "riot": "^2.2.4"
   }
 }
