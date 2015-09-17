@@ -1,13 +1,16 @@
 require('../core/tags/loader-wave.tag')
 <ex-reddit>
   <h2>Redux Async Example: Reddit API</h2>
-  <select onchange={this.changeReddit} value={state.reddit.selectedReddit}>
-    <option value="riotjs">Riot JS</option>
-    <option value="angular">Angular</option>
-    <option value="reactjs">React JS</option>
-    <option value="backbonejs">Backbone JS</option>
-    <option value="mithriljs">Mithril JS</option>
-  </select>
+
+  <div class="dropdown icon">
+    <select onchange={this.changeReddit} value={state.reddit.selectedReddit}>
+      <option value="riotjs">Riot JS</option>
+      <option value="angular">Angular</option>
+      <option value="reactjs">React JS</option>
+      <option value="backbonejs">Backbone JS</option>
+      <option value="mithriljs">Mithril JS</option>
+    </select>
+  </div>
 
   <loader-wave show={state.reddit.postsByReddit[state.reddit.selectedReddit].isFetching} width="100px" height="50px"></loader-wave>
 
