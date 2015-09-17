@@ -4,7 +4,4 @@
       <option each={option in opts.options} value="{option.id}">{option.text}</option>
     </select>
   </div>
-  <script>
-    console.log('z-select', this);
-  </script>
 </z-select>
