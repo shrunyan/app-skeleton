@@ -4,7 +4,7 @@ import {
   FETCH_POSTS_REQUEST, FETCH_POSTS_SUCCESS
 } from '../actions/reddit'
 
-function selectedReddit (state = 'reactjs', action) {
+function selectedReddit (state = 'riotjs', action) {
   switch (action.type) {
     case SELECT_REDDIT:
       return action.reddit
