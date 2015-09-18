@@ -6,7 +6,7 @@ require('../core/tags/loader-wave.tag')
   <loader-wave show={state.reddit.posts[state.reddit.selected].isFetching} width="100px" height="50px"></loader-wave>
   <ul>
     <li each={post, i in state.reddit.posts[state.reddit.selected].items} class="post">
-      <a href="https://reddit.com{post.permalink}" target="_blank">{post.title}</a>
+      <a href="{post.url}" target="_blank">{post.title}</a>
     </li>
   </ul>
 
