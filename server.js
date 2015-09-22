@@ -1,16 +1,11 @@
+var path = require('path')
 var express = require('express')
 var app = express()
 
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname+'/public')))
 
-app.get('/', function (req, res) {
-  console.log('serving homepage')
-  res.send('index.html')
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname+'/public/index.html'))
 })
 
-var server = app.listen(8001, function () {
-  var host = server.address().address
-  var port = server.address().port
-
-  console.log('Listen on: ', host, port)
-})
+app.listen(8001)
