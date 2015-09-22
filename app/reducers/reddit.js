@@ -4,7 +4,28 @@ import {
   FETCH_POSTS_REQUEST, FETCH_POSTS_SUCCESS
 } from '../actions/reddit'
 
-function selectedReddit (state = 'reactjs', action) {
+let initialTopics = [
+  {
+    id: 'riotjs',
+    text: 'Riot'
+  },
+  {
+    id: 'reactjs',
+    text: 'React'
+  },
+  {
+    id: 'angular',
+    text: 'Angular'
+  }
+]
+function topics (state = initialTopics, action) {
+  switch (action.type) {
+    default:
+      return state
+  }
+}
+
+function selected (state = 'riotjs', action) {
   switch (action.type) {
     case SELECT_REDDIT:
       return action.reddit
@@ -13,7 +34,7 @@ function selectedReddit (state = 'reactjs', action) {
   }
 }
 
-function posts (state = {
+function processPosts (state = {
   isFetching: false,
   didInvalidate: false,
   items: []
@@ -40,13 +61,13 @@ function posts (state = {
   }
 }
 
-function postsByReddit (state = {}, action) {
+function posts (state = {}, action) {
   switch (action.type) {
     case INVALIDATE_REDDIT:
     case FETCH_POSTS_SUCCESS:
     case FETCH_POSTS_REQUEST:
       return Object.assign({}, state, {
-        [action.reddit]: posts(state[action.reddit], action)
+        [action.reddit]: processPosts(state[action.reddit], action)
       })
     default:
       return state
@@ -54,8 +75,9 @@ function postsByReddit (state = {}, action) {
 }
 
 const reducer = combineReducers({
-  postsByReddit,
-  selectedReddit
+  topics,
+  posts,
+  selected
 })
 
 export default reducer

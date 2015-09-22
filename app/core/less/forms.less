@@ -1,23 +1,65 @@
 @import "color.less";
 
-form {
-
-}
-label {
-  display: block;
-}
-input {
-  display: block;
-  min-height: 28px;
-  border: 1px solid @z-sky;
-  padding: 0.2rem 0.6rem;
-}
-select {
-  display: block;
-  option {
+#app {
+  form {
 
   }
+  label {
+    display: block;
+  }
+  input {
+    display: block;
+    min-height: 28px;
+    border: 1px solid @z-sky;
+    padding: 0.2rem 0.6rem;
+  }
+  select {
+    -webkit-appearance: none;
+    background-color: @z-sky;
+    border: none;
+    border-radius: 0;
+    color: @z-midnight;
+    cursor: pointer;
+    display: block;
+    font-weight: 700;
+    line-height: 34px;
+    padding: 4px 8px;
+  }
+  .dropdown {
+    &:after {
+      content: "\f0dc";
+      color: @z-midnight;
+      position: absolute;
+      right: 8px;
+      top: 12px;
+      z-index: 1;
+    }
+    background: @z-sky;
+    border-radius: 2px;
+    color: @z-midnight;
+    position: relative;
+    overflow: hidden;
+    width: 240px;
+
+    select {
+      background: transparent;
+      width: 100%;
+    }
+  }
+  textarea {
+    display: block;
+  }
 }
-textarea {
-  display: block;
+
+@media only screen and (max-width: 35em) {
+  #app {
+    label,
+    input,
+    select,
+    textarea,
+    .dropdown {
+      min-height: 30px;
+      width: 100%;
+    }
+  }
 }
