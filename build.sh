@@ -6,4 +6,4 @@ npm install
 echo 'RUNNING TESTS'
 npm test
 echo 'STARTING APPLICATION'
-./node_modules/.bin/gulp default $@
+./node_modules/.bin/gulp build $@
