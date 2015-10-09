@@ -85,6 +85,6 @@ We have integrated [segment.io][segment] into our application codebase so we can
 [editorconfig]: http://editorconfig.org/
 [browserify]: http://browserify.org/
 [segment]: http://segment.io
-[redux]: [http://rackt.github.io/redux/index.html]
-[grapnel]: [https://www.npmjs.com/package/grapnel]
+[redux]: http://rackt.github.io/redux/index.html
+[grapnel]: https://www.npmjs.com/package/grapnel
 [object.assign]: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill]
