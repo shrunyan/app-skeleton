@@ -1,4 +1,6 @@
 # Zesty Skeleton Application
+
+[![Join the chat at https://gitter.im/shrunyan/app-skeleton](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/shrunyan/app-skeleton?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 _We develop client applications as view layer implementations that work with Zesty APIs to power themselves._
 
 ## Getting Started
