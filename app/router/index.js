@@ -20,7 +20,7 @@ router.on('navigate', function () {
 
 // Setup Routes
 router.get('/', (req) => {
-  riot.mountTo('#app', 'app', {store})
+  riot.mount('app', {store})
   analytics.page(req)
 })
 
