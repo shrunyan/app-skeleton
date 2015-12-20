@@ -3,7 +3,7 @@
 var gulp = require('gulp')
 var plugins = require('gulp-load-plugins')()
 var minimist = require('minimist')
-var assign = require('lodash-node/modern/object/assign')
+var assign = require('lodash.assign')
 
 var env = {
   string: 'env',
