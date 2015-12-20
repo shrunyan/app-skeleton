@@ -1,5 +1,6 @@
-# Zesty Skeleton Application
-_We develop client applications as view layer implementations that work with Zesty APIs to power themselves._
+# Riot App Skeleton
+
+The Zesty.io Riot App Skeleton is our starting point for front end applications. Our hope is that we can expose internally learnings to the Riot community.
 
 ## Getting Started
 
@@ -85,6 +86,6 @@ We have integrated [segment.io][segment] into our application codebase so we can
 [editorconfig]: http://editorconfig.org/
 [browserify]: http://browserify.org/
 [segment]: http://segment.io
-[redux]: [http://rackt.github.io/redux/index.html]
-[grapnel]: [https://www.npmjs.com/package/grapnel]
+[redux]: http://rackt.github.io/redux/index.html
+[grapnel]: https://www.npmjs.com/package/grapnel
 [object.assign]: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill]
