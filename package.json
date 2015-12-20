@@ -32,7 +32,6 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.2.0",
     "gulp-watch": "^4.3.3",
-    "lodash-node": "^3.10.1",
     "minimist": "^1.2.0",
     "pm2": "^0.14.7",
     "riotify": "^0.1.2",
@@ -45,14 +44,15 @@
     "watchify": "^3.3.0"
   },
   "dependencies": {
-    "blueimp-md5": "^1.1.1",
-    "es6-promise": "^2.3.0",
+    "blueimp-md5": "1.1.x",
+    "es6-promise": "3.0.x",
     "grapnel": "https://registry.npmjs.org/grapnel/-/grapnel-0.5.11.tgz",
-    "isomorphic-fetch": "^2.1.1",
-    "moment": "^2.10.5",
-    "redux": "^1.0.1",
-    "redux-logger": "^1.0.6",
-    "redux-thunk": "^0.1.0",
-    "riot": "^2.2.4"
+    "isomorphic-fetch": "2.2.x",
+    "lodash.assign": "3.2.0",
+    "moment": "2.10.x",
+    "redux": "3.0.x",
+    "redux-logger": "2.3.x",
+    "redux-thunk": "1.0.x",
+    "riot": "2.3.x"
   }
 }
