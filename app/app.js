@@ -1,4 +1,3 @@
-/* global Highcharts */
 /* global analytics */
 
 // Setup Polyfills, one day these will go away
@@ -9,13 +8,6 @@ Promise.polyfill()
 import riot from 'riot'
 import router from './router'
 import { SEGMENT_SECRET } from './config'
-
-// @see http://api.highcharts.com/highcharts
-Highcharts.setOptions({
-  lang: {
-    loading: 'Loading'
-  }
-})
 
 // Load tracking
 analytics.load(SEGMENT_SECRET)
