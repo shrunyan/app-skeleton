@@ -4,6 +4,7 @@ dist/
 public/
 node_modules/
 .idea/
+.otto
 
 # Extensions
 *.log
@@ -12,4 +13,5 @@ node_modules/
 
 # Files
 .DS_Store
+.ottoid
 app/config.js
